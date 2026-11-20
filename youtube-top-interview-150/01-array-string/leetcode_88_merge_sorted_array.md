@@ -7,7 +7,15 @@
 
 ---
 
-## Solução: Two Pointers de Trás para Frente (*In-Place*) [[00:03:03]](https://youtu.be/W305-utklTs?t=183)
+## Visão Geral das Abordagens
+
+| Abordagem | Tempo | Espaço | Quando usar |
+| :--- | :---: | :---: | :--- |
+| **1. Two Pointers de Trás para Frente (*In-Place*)** | $O(M + N)$ | $O(1)$ | Solução ótima aproveitando o espaço livre ao final de `nums1` |
+
+---
+
+## Solução 1: Two Pointers de Trás para Frente (*In-Place*) [[00:03:03]](https://youtu.be/W305-utklTs?t=183)
 
 Como `nums1` possui espaço livre exatamente no final (nas últimas `n` posições), podemos preencher `nums1` **de trás para frente** (`i` indo de `m + n - 1` até `0`) sem nunca sobrescrever elementos ainda não processados de `nums1`.
 

@@ -21,7 +21,7 @@ A quantidade de água retida em uma posição `i` depende da menor entre as maio
 
 ---
 
-## 1. Força Bruta [[00:02:33]](https://youtu.be/ln_dFs3KoMA?t=153)
+## Solução 1: Força Bruta [[00:02:33]](https://youtu.be/ln_dFs3KoMA?t=153)
 
 Para cada posição `i`, percorremos todo o array buscando a maior barra à esquerda (`j < i`) e a maior barra à direita (`j > i`). O limite de escoamento é `min(maior_esquerda, maior_direita)`; se esse limite for maior que `height[i]`, somamos a diferença à resposta.
 
@@ -165,7 +165,7 @@ int main() {
 
 ---
 
-## 2. Prefix Max e Suffix Max [[00:08:00]](https://youtu.be/ln_dFs3KoMA?t=480)
+## Solução 2: Prefix Max e Suffix Max [[00:08:00]](https://youtu.be/ln_dFs3KoMA?t=480)
 
 Para eliminar o laço interno, pré-computamos dois vetores auxiliares:
 1. `maior_esquerda[i]`: a maior altura encontrada no prefixo `[0..i]`.
@@ -303,7 +303,7 @@ int main() {
 
 ---
 
-## 3. Two Pointers (Sem Memória Extra) [[00:11:39]](https://youtu.be/ln_dFs3KoMA?t=699)
+## Solução 3: Two Pointers (Sem Memória Extra) [[00:11:39]](https://youtu.be/ln_dFs3KoMA?t=699)
 
 Encontramos primeiro a posição do pico máximo global (`maior_pos`). Como nenhuma barra ultrapassa esse pico, podemos calcular a água em duas varreduras independentes até ele:
 1. Da esquerda até `maior_pos`, acumulando a água sempre que encontramos uma barra maior ou igual à parede atual (`cur_maior_pos`), descontando o somatório das barras intermediárias.

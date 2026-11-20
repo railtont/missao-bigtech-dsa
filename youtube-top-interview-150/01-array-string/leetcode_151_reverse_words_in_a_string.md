@@ -18,7 +18,7 @@
 
 ---
 
-## 1. Solução Base (`split` + Inversão) [[00:01:10]](https://youtu.be/MpuYAM_IBrM?t=70)
+## Solução 1: Solução Base (`split` + Inversão) [[00:01:10]](https://youtu.be/MpuYAM_IBrM?t=70)
 
 Dividimos a string nos espaços, filtramos as strings vazias geradas por espaços consecutivos ou nas extremidades, invertemos a lista de palavras e juntamos novamente com um único espaço simples.
 
@@ -132,7 +132,7 @@ int main() {
 
 ---
 
-## 2. Follow-up In-Place (Espaço Extra $O(1)$) [[00:04:00]](https://youtu.be/MpuYAM_IBrM?t=240)
+## Solução 2: Follow-up In-Place (Espaço Extra $O(1)$) [[00:04:00]](https://youtu.be/MpuYAM_IBrM?t=240)
 
 Para resolver o problema *in-place* (sem criar listas auxiliares de palavras), aplicamos três etapas diretamente sobre o array de caracteres:
 

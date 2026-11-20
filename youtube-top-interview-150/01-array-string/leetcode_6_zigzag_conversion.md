@@ -7,7 +7,15 @@
 
 ---
 
-## Solução: Simulação Linha a Linha
+## Visão Geral das Abordagens
+
+| Abordagem | Tempo | Espaço | Quando usar |
+| :--- | :---: | :---: | :--- |
+| **1. Simulação Linha a Linha** | $O(N)$ | $O(N)$ | Solução limpa e intuitiva evitando fórmulas de índices de ciclo |
+
+---
+
+## Solução 1: Simulação Linha a Linha
 
 Em vez de construir uma matriz bidimensional com espaços vazios, criamos um vetor com `numRows` acumuladores de caracteres (um para cada linha) e simulamos o movimento em zigue-zague usando duas variáveis de controle:
 

@@ -7,7 +7,15 @@
 
 ---
 
-## Solução: Two Pointers (Leitura e Escrita *In-Place*) [[00:02:17]](https://youtu.be/F5-vVueNysg?t=137)
+## Visão Geral das Abordagens
+
+| Abordagem | Tempo | Espaço | Quando usar |
+| :--- | :---: | :---: | :--- |
+| **1. Two Pointers (Leitura e Escrita *In-Place*)** | $O(N)$ | $O(1)$ | Solução ótima para remover duplicatas em array ordenado sem memória extra |
+
+---
+
+## Solução 1: Two Pointers (Leitura e Escrita *In-Place*) [[00:02:17]](https://youtu.be/F5-vVueNysg?t=137)
 
 Como o array `nums` já está ordenado em ordem não decrescente, todos os elementos duplicados aparecem em posições adjacentes.
 

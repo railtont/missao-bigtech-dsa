@@ -7,7 +7,15 @@
 
 ---
 
-## Solução: Construção Gulosa Linha a Linha [[00:02:48]](https://youtu.be/yeJ5y2YsJ24?t=168)
+## Visão Geral das Abordagens
+
+| Abordagem | Tempo | Espaço | Quando usar |
+| :--- | :---: | :---: | :--- |
+| **1. Construção Gulosa Linha a Linha** | $O(T)$ | $O(T)$ | Solução direta e modular isolando o empacotamento e a justificação por linha |
+
+---
+
+## Solução 1: Construção Gulosa Linha a Linha [[00:02:48]](https://youtu.be/yeJ5y2YsJ24?t=168)
 
 Isolamos a responsabilidade de montar e justificar cada linha em uma função auxiliar `newLine`, dividindo o problema em duas etapas bem claras:
 

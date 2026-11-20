@@ -7,7 +7,15 @@
 
 ---
 
-## Solução: Array Dinâmico + Hash Map (*Swap-and-Pop*) [[00:02:30]](https://youtu.be/oZkkdtGNWeY?t=150)
+## Visão Geral das Abordagens
+
+| Abordagem | Tempo | Espaço | Quando usar |
+| :--- | :---: | :---: | :--- |
+| **1. Array Dinâmico + Hash Map (*Swap-and-Pop*)** | $O(1)$ | $O(N)$ | Solução ótima para inserção, remoção e acesso aleatório em $O(1)$ médio |
+
+---
+
+## Solução 1: Array Dinâmico + Hash Map (*Swap-and-Pop*) [[00:02:30]](https://youtu.be/oZkkdtGNWeY?t=150)
 
 Para suportar `insert`, `remove` e `getRandom` em tempo médio $O(1)$, combinamos duas estruturas:
 

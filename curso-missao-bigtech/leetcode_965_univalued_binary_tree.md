@@ -17,7 +17,7 @@
 
 ---
 
-## 1. DFS com Função Auxiliar (`target`)
+## Solução 1: DFS com Função Auxiliar (`target`)
 
 Como a raiz (`root`) sempre faz parte da árvore (pelas restrições do problema, há pelo menos 1 nó), passamos `root.val` como `target` para uma função auxiliar `dfs(node, target)`:
 
@@ -134,7 +134,7 @@ public:
 
 ---
 
-## 2. Recursão Direta na Própria Função (Sem Função Auxiliar)
+## Solução 2: Recursão Direta na Própria Função (Sem Função Auxiliar)
 
 Em vez de comparar todos os nós com uma única referência fixa da raiz passada como parâmetro (`target`), também funciona comparar diretamente cada **pai com seus filhos**. Pela transitividade da igualdade, se cada nó tem o mesmo valor que seus filhos esquerdo e direito (quando existem), toda a árvore possui o mesmo valor — eliminando a necessidade de uma função auxiliar.
 

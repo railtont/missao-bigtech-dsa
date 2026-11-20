@@ -7,7 +7,15 @@
 
 ---
 
-## Solução: Varredura Vertical por Posição [[00:01:26]](https://youtu.be/VCAfnaX5Qno?t=86)
+## Visão Geral das Abordagens
+
+| Abordagem | Tempo | Espaço | Quando usar |
+| :--- | :---: | :---: | :--- |
+| **1. Varredura Vertical por Posição** | $O(N \cdot M)$ | $O(1)$ | Solução direta e sem memória extra, parando na primeira divergência |
+
+---
+
+## Solução 1: Varredura Vertical por Posição [[00:01:26]](https://youtu.be/VCAfnaX5Qno?t=86)
 
 Usamos a primeira string (`strs[0]`) como referência e percorremos coluna por coluna (`pos` de `0` até `len(strs[0]) - 1`). Para cada posição `pos`, verificamos se todas as strings do vetor possuem o mesmo caractere naquela coluna:
 

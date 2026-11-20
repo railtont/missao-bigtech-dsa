@@ -21,7 +21,7 @@ Embora seja rotulado como *Easy*, este problema possui três níveis distintos d
 
 ---
 
-## 1. Força Bruta (Janela Deslizante) [[00:00:51]](https://youtu.be/GitJwW78Hho?t=51)
+## Solução 1: Força Bruta (Janela Deslizante) [[00:00:51]](https://youtu.be/GitJwW78Hho?t=51)
 
 Testamos cada posição inicial `i` de `haystack` (de `0` até `n - m`) e comparamos caractere por caractere com `needle`. No pior caso (ex: `haystack = "aaaaab"` e `needle = "aaab"`), refazemos quase todas as comparações a cada deslocamento.
 
@@ -134,7 +134,7 @@ int main() {
 
 ---
 
-## 2. Rolling Hash Polinomial (Rabin-Karp) [[00:03:30]](https://youtu.be/GitJwW78Hho?t=210)
+## Solução 2: Rolling Hash Polinomial (Rabin-Karp) [[00:03:30]](https://youtu.be/GitJwW78Hho?t=210)
 
 Em vez de comparar todas as letras novamente a cada deslocamento, representamos cada janela como um número usando uma **hash polinomial** com base prima $P = 31$ e módulo $MOD = 10^9 + 7$. Ao deslizar a janela para a direita, atualizamos a hash em **$O(1)$** em três passos:
 
@@ -327,7 +327,7 @@ int main() {
 
 ---
 
-## 3. KMP — Knuth-Morris-Pratt [[00:14:08]](https://youtu.be/GitJwW78Hho?t=848)
+## Solução 3: KMP — Knuth-Morris-Pratt [[00:14:08]](https://youtu.be/GitJwW78Hho?t=848)
 
 O algoritmo **KMP** pré-processa `needle` construindo o vetor **LPS** (*Longest Prefix Suffix*), que indica para onde voltar caso uma comparação falhe, evitando retroceder o ponteiro de `haystack`. Assim, percorremos o texto em uma única passada linear sem risco de colisões de hash.
 

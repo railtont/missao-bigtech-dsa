@@ -7,7 +7,15 @@
 
 ---
 
-## Solução: Two Pointers (Comparação com `last - 2`) [[00:02:24]](https://youtu.be/OymtFs5qpEU?t=144)
+## Visão Geral das Abordagens
+
+| Abordagem | Tempo | Espaço | Quando usar |
+| :--- | :---: | :---: | :--- |
+| **1. Two Pointers (Comparação com `last - 2`)** | $O(N)$ | $O(1)$ | Solução ótima *in-place* permitindo no máximo 2 ocorrências por valor |
+
+---
+
+## Solução 1: Two Pointers (Comparação com `last - 2`) [[00:02:24]](https://youtu.be/OymtFs5qpEU?t=144)
 
 Como `nums` já está ordenado e cada valor pode aparecer **no máximo 2 vezes**, mantemos dois ponteiros:
 

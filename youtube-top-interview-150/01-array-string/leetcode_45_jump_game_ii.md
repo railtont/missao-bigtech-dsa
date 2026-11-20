@@ -7,7 +7,15 @@
 
 ---
 
-## Solução: Abordagem Gulosa por Níveis (Intervalos de Alcance)
+## Visão Geral das Abordagens
+
+| Abordagem | Tempo | Espaço | Quando usar |
+| :--- | :---: | :---: | :--- |
+| **1. Abordagem Gulosa por Níveis (Intervalos de Alcance)** | $O(N)$ | $O(1)$ | Solução ótima evitando a degradação $O(N^2)$ de DFS/DP |
+
+---
+
+## Solução 1: Abordagem Gulosa por Níveis (Intervalos de Alcance)
 
 Podemos enxergar o problema como uma busca em largura (BFS) implícita sobre intervalos do array: cada nível `[cur_start, cur_end]` representa todas as posições alcançáveis com exatamente `jumps` saltos.
 

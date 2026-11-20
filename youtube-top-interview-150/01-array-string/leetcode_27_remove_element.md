@@ -7,7 +7,15 @@
 
 ---
 
-## Solução: Two Pointers (Leitura e Escrita *In-Place*) [[00:06:17]](https://youtu.be/7bG1gBWzbmA?t=377)
+## Visão Geral das Abordagens
+
+| Abordagem | Tempo | Espaço | Quando usar |
+| :--- | :---: | :---: | :--- |
+| **1. Two Pointers (Leitura e Escrita *In-Place*)** | $O(N)$ | $O(1)$ | Solução ótima para compactar elementos válidos sem memória extra |
+
+---
+
+## Solução 1: Two Pointers (Leitura e Escrita *In-Place*) [[00:06:17]](https://youtu.be/7bG1gBWzbmA?t=377)
 
 Usamos dois ponteiros para compactar os elementos válidos no início de `nums` sem precisar de memória extra:
 

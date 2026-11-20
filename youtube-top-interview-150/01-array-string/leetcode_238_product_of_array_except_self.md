@@ -7,7 +7,15 @@
 
 ---
 
-## Solução: Produto de Prefixos e Sufixos ($O(1)$ de Espaço Extra) [[00:01:14]](https://youtu.be/VOZGDXsKAyM?t=74)
+## Visão Geral das Abordagens
+
+| Abordagem | Tempo | Espaço | Quando usar |
+| :--- | :---: | :---: | :--- |
+| **1. Produto de Prefixos e Sufixos** | $O(N)$ | $O(1)$ | Solução ótima sem divisão, reaproveitando `nums` e `output` |
+
+---
+
+## Solução 1: Produto de Prefixos e Sufixos ($O(1)$ de Espaço Extra) [[00:01:14]](https://youtu.be/VOZGDXsKAyM?t=74)
 
 O produto de todos os elementos exceto `nums[i]` é igual ao produto dos elementos **à esquerda** de `i` (prefixo) multiplicado pelo produto dos elementos **à direita** de `i` (sufixo), sem precisar usar divisão.
 

@@ -7,7 +7,15 @@
 
 ---
 
-## Solução: Abordagem Gulosa (Alcance Máximo) [[00:02:47]](https://youtu.be/kusX9efDnig?t=167)
+## Visão Geral das Abordagens
+
+| Abordagem | Tempo | Espaço | Quando usar |
+| :--- | :---: | :---: | :--- |
+| **1. Abordagem Gulosa (Alcance Máximo)** | $O(N)$ | $O(1)$ | Solução ótima em uma única passagem mantendo o maior índice alcançável |
+
+---
+
+## Solução 1: Abordagem Gulosa (Alcance Máximo) [[00:02:47]](https://youtu.be/kusX9efDnig?t=167)
 
 Mantemos uma única variável `last` que representa o **maior índice alcançável** até o momento.
 

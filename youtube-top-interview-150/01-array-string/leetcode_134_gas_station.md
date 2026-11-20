@@ -7,7 +7,15 @@
 
 ---
 
-## Solução: Abordagem Gulosa (Menor Acumulado) [[00:01:08]](https://youtu.be/Y2QzhSLwGfI?t=68)
+## Visão Geral das Abordagens
+
+| Abordagem | Tempo | Espaço | Quando usar |
+| :--- | :---: | :---: | :--- |
+| **1. Abordagem Gulosa (Menor Acumulado)** | $O(N)$ | $O(1)$ | Solução ótima encontrando o ponto de partida após o menor saldo acumulado |
+
+---
+
+## Solução 1: Abordagem Gulosa (Menor Acumulado) [[00:01:08]](https://youtu.be/Y2QzhSLwGfI?t=68)
 
 Se acompanharmos o saldo acumulado de combustível `acc += gas[i] - cost[i]` ao longo de todo o circuito a partir do índice `0`, o ponto de partida ótimo para completar a volta sem ficar negativo é **logo após o índice onde esse acumulado atinge o seu menor valor** (`(smaller_pos + 1) % n`).
 

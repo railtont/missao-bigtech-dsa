@@ -7,7 +7,15 @@
 
 ---
 
-## Solução: Two Pointers (Ponteiros Opostos) [[00:08:50]](https://youtu.be/gums6WNKYEU?t=530)
+## Visão Geral das Abordagens
+
+| Abordagem | Tempo | Espaço | Quando usar |
+| :--- | :---: | :---: | :--- |
+| **1. Two Pointers (Ponteiros Opostos)** | $O(N)$ | $O(1)$ | Solução ótima sem alocar string filtrada ou invertida |
+
+---
+
+## Solução 1: Two Pointers (Ponteiros Opostos) [[00:08:50]](https://youtu.be/gums6WNKYEU?t=530)
 
 Em vez de construir uma nova string filtrada e invertê-la (o que gastaria memória $O(N)$), usamos dois ponteiros que começam nas extremidades da string (`left = 0` e `right = len(s) - 1`) e caminham em direção ao centro:
 

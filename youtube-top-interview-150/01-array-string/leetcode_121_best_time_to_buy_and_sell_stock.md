@@ -7,7 +7,15 @@
 
 ---
 
-## Solução: Abordagem Gulosa (Uma Passagem) [[00:01:56]](https://youtu.be/jusKBMyJC0M?t=116)
+## Visão Geral das Abordagens
+
+| Abordagem | Tempo | Espaço | Quando usar |
+| :--- | :---: | :---: | :--- |
+| **1. Abordagem Gulosa (Uma Passagem)** | $O(N)$ | $O(1)$ | Solução ótima para maximizar lucro em uma única transação |
+
+---
+
+## Solução 1: Abordagem Gulosa (Uma Passagem) [[00:01:56]](https://youtu.be/jusKBMyJC0M?t=116)
 
 Para maximizar o lucro com **uma única compra e uma única venda** (comprando sempre antes de vender), consideramos cada dia `v` como um possível dia de venda e mantemos o menor preço de compra visto até então (`menor_valor_de_compra`).
 

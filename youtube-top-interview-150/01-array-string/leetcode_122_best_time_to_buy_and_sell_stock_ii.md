@@ -7,7 +7,15 @@
 
 ---
 
-## Solução: Abordagem Gulosa (Soma das Subidas) [[00:03:53]](https://youtu.be/SZMvYTdpJEs?t=233)
+## Visão Geral das Abordagens
+
+| Abordagem | Tempo | Espaço | Quando usar |
+| :--- | :---: | :---: | :--- |
+| **1. Abordagem Gulosa (Soma das Subidas)** | $O(N)$ | $O(1)$ | Solução ótima quando múltiplas transações são permitidas |
+
+---
+
+## Solução 1: Abordagem Gulosa (Soma das Subidas) [[00:03:53]](https://youtu.be/SZMvYTdpJEs?t=233)
 
 Como podemos comprar e vender quantas vezes quisermos (inclusive vendendo e recomprando no mesmo dia), o lucro total entre um vale e um pico é exatamente igual à soma de todos os aumentos diários consecutivos nesse intervalo.
 

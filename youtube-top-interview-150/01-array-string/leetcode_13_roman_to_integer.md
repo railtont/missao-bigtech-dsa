@@ -7,7 +7,15 @@
 
 ---
 
-## Solução: Varredura Linear com Regra de Subtração [[00:01:17]](https://youtu.be/0txKBdiEORM?t=77)
+## Visão Geral das Abordagens
+
+| Abordagem | Tempo | Espaço | Quando usar |
+| :--- | :---: | :---: | :--- |
+| **1. Varredura Linear com Regra de Subtração** | $O(N)$ | $O(1)$ | Solução ótima e direta comparando cada símbolo com o próximo |
+
+---
+
+## Solução 1: Varredura Linear com Regra de Subtração [[00:01:17]](https://youtu.be/0txKBdiEORM?t=77)
 
 Nos numerais romanos, os símbolos normalmente aparecem em ordem decrescente da esquerda para a direita (ex: `VI` = $5 + 1 = 6$). A exceção ocorre nos casos de subtração (`IV`, `IX`, `XL`, `XC`, `CD`, `CM`), em que um símbolo de valor menor aparece imediatamente antes de um símbolo de valor maior.
 
