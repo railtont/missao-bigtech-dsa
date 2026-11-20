@@ -7,17 +7,108 @@
 
 ---
 
-> [!WARNING]
-> **Work in Progress (Em construção):** O código de referência desta resolução ainda será adicionado ao repositório. Enquanto isso, você pode acompanhar a explicação completa e a implementação passo a passo no [vídeo do Episódio 8](https://youtu.be/SZMvYTdpJEs).
+## Solução: Abordagem Gulosa (Soma das Subidas) [[00:03:53]](https://youtu.be/SZMvYTdpJEs?t=233)
 
-## Capítulos do Vídeo
+Como podemos comprar e vender quantas vezes quisermos (inclusive vendendo e recomprando no mesmo dia), o lucro total entre um vale e um pico é exatamente igual à soma de todos os aumentos diários consecutivos nesse intervalo.
 
-* [[00:00]](https://youtu.be/SZMvYTdpJEs?t=0) — Introdução
-* [[00:12]](https://youtu.be/SZMvYTdpJEs?t=12) — Problema
-* [[01:42]](https://youtu.be/SZMvYTdpJEs?t=102) — Insight
-* [[03:53]](https://youtu.be/SZMvYTdpJEs?t=233) — Solução Ótima $O(N)$
-* [[04:38]](https://youtu.be/SZMvYTdpJEs?t=278) — Implementação
-* [[05:27]](https://youtu.be/SZMvYTdpJEs?t=327) — O Nível 3
+Assim, percorremos o array `prices` a partir do índice `1`: sempre que o preço do dia atual for maior do que o do dia anterior (`prices[v] > prices[v - 1]`), somamos a diferença `prices[v] - prices[v - 1]` ao `lucro`.
+
+* **Tempo:** $O(N)$, onde $N$ é o tamanho do array `prices` (uma única varredura).
+* **Espaço:** $O(1)$, usando apenas variáveis auxiliares constantes.
+
+<details open>
+<summary><strong>Python</strong></summary>
+
+```python
+class Solution:
+    def maxProfit(self, prices: list[int]) -> int:
+        n = len(prices)
+        lucro = 0
+
+        for v in range(1, n):
+            if prices[v] > prices[v - 1]:
+                lucro = lucro + (prices[v] - prices[v - 1])
+
+        return lucro
+
+
+if __name__ == "__main__":
+    solution = Solution()
+    print(solution.maxProfit([7, 1, 5, 3, 6, 4]))  # 7
+    print(solution.maxProfit([1, 2, 3, 4, 5]))     # 4
+    print(solution.maxProfit([7, 6, 4, 3, 1]))     # 0
+```
+
+</details>
+
+<details>
+<summary><strong>Java</strong></summary>
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        System.out.println(solution.maxProfit(new int[]{7, 1, 5, 3, 6, 4})); // 7
+        System.out.println(solution.maxProfit(new int[]{1, 2, 3, 4, 5}));    // 4
+        System.out.println(solution.maxProfit(new int[]{7, 6, 4, 3, 1}));    // 0
+    }
+}
+
+class Solution {
+    public int maxProfit(int[] prices) {
+        int n = prices.length;
+        int lucro = 0;
+
+        for (int v = 1; v < n; v++) {
+            if (prices[v] > prices[v - 1]) {
+                lucro = lucro + (prices[v] - prices[v - 1]);
+            }
+        }
+
+        return lucro;
+    }
+}
+```
+
+</details>
+
+<details>
+<summary><strong>C++</strong></summary>
+
+```cpp
+#include <iostream>
+#include <vector>
+using namespace std;
+
+class Solution {
+public:
+    int maxProfit(vector<int>& prices) {
+        int n = (int)prices.size();
+        int lucro = 0;
+
+        for (int v = 1; v < n; v++) {
+            if (prices[v] > prices[v - 1]) {
+                lucro = lucro + (prices[v] - prices[v - 1]);
+            }
+        }
+
+        return lucro;
+    }
+};
+
+int main() {
+    Solution solution;
+    vector<int> prices1 = {7, 1, 5, 3, 6, 4};
+    vector<int> prices2 = {1, 2, 3, 4, 5};
+    vector<int> prices3 = {7, 6, 4, 3, 1};
+    cout << solution.maxProfit(prices1) << endl; // 7
+    cout << solution.maxProfit(prices2) << endl; // 4
+    cout << solution.maxProfit(prices3) << endl; // 0
+    return 0;
+}
+```
+
+</details>
 
 ---
 
